@@ -109,14 +109,14 @@ trait ResponseTrait
         $data = $data ?: null;
 
         $res = match (static::$responseCodeKey) {
-            default => [
+                    default => [
                 'code' => $err_code,
                 'message' => $err_msg,
                 'data' => $data,
             ],
             1 => [
-                'code' => $err_code,
-                'message' => $err_msg,
+                'err_code' => $err_code,
+                'err_msg' => $err_msg,
                 'data' => $data,
             ],
             2 => [
@@ -126,12 +126,12 @@ trait ResponseTrait
             ],
             3 => [
                 'code' => $err_code,
-                'message' => $err_msg,
+                'msg' => $err_msg,
                 'data' => $data,
             ],
             4 => [
-                'code' => $err_code,
-                'message' => $err_msg,
+                'errcode' => $err_code,
+                'errmsg' => $err_msg,
                 'data' => $data,
             ],
         };
@@ -150,14 +150,14 @@ trait ResponseTrait
     public function fail($err_msg = 'unknown error', $err_code = 400, $data = [], $headers = [])
     {
         $res = match (static::$responseCodeKey) {
-            default => [
+                    default => [
                 'code' => $err_code,
                 'message' => $err_msg,
                 'data' => $data,
             ],
             1 => [
-                'code' => $err_code,
-                'message' => $err_msg,
+                'err_code' => $err_code,
+                'err_msg' => $err_msg,
                 'data' => $data,
             ],
             2 => [
@@ -167,12 +167,12 @@ trait ResponseTrait
             ],
             3 => [
                 'code' => $err_code,
-                'message' => $err_msg,
+                'msg' => $err_msg,
                 'data' => $data,
             ],
             4 => [
-                'code' => $err_code,
-                'message' => $err_msg,
+                'errcode' => $err_code,
+                'errmsg' => $err_msg,
                 'data' => $data,
             ],
         };
