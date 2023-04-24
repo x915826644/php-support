@@ -176,6 +176,7 @@ trait ResponseTrait
                 'data' => $data,
             ],
         };
+        
 
         if (! \request()->wantsJson()) {
             $err_msg = \json_encode($res, \JSON_UNESCAPED_SLASHES|\JSON_UNESCAPED_UNICODE|\JSON_PRETTY_PRINT);
