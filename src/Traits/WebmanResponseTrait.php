@@ -13,7 +13,7 @@ trait WebmanResponseTrait
 
     public static function setResponseCodeKey(int $responseCodeKey = 1)
     {
-        ResponseTrait::$responseCodeKey = $responseCodeKey;
+        static::$responseCodeKey = $responseCodeKey;
     }
 
     public static function string2utf8($string = '')
@@ -149,7 +149,7 @@ trait WebmanResponseTrait
 
     public function fail($err_msg = 'unknown error', $err_code = 400, $data = [], $headers = [])
     {
-        $res = match (ResponseTrait::$responseCodeKey) {
+        $res = match (static::$responseCodeKey) {
             default => [
                 'code' => $err_code,
                 'message' => $err_msg,
