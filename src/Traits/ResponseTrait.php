@@ -110,13 +110,13 @@ trait ResponseTrait
 
         $res = match (static::$responseCodeKey) {
             default => [
-                'err_code' => $err_code,
-                'err_msg' => $err_msg,
+                'code' => $err_code,
+                'message' => $err_msg,
                 'data' => $data,
             ],
             1 => [
-                'err_code' => $err_code,
-                'err_msg' => $err_msg,
+                'code' => $err_code,
+                'message' => $err_msg,
                 'data' => $data,
             ],
             2 => [
@@ -126,12 +126,12 @@ trait ResponseTrait
             ],
             3 => [
                 'code' => $err_code,
-                'msg' => $err_msg,
+                'message' => $err_msg,
                 'data' => $data,
             ],
             4 => [
-                'errcode' => $err_code,
-                'errmsg' => $err_msg,
+                'code' => $err_code,
+                'message' => $err_msg,
                 'data' => $data,
             ],
         };
@@ -151,13 +151,13 @@ trait ResponseTrait
     {
         $res = match (static::$responseCodeKey) {
             default => [
-                'err_code' => $err_code,
-                'err_msg' => $err_msg,
+                'code' => $err_code,
+                'message' => $err_msg,
                 'data' => $data,
             ],
             1 => [
-                'err_code' => $err_code,
-                'err_msg' => $err_msg,
+                'code' => $err_code,
+                'message' => $err_msg,
                 'data' => $data,
             ],
             2 => [
@@ -167,12 +167,12 @@ trait ResponseTrait
             ],
             3 => [
                 'code' => $err_code,
-                'msg' => $err_msg,
+                'message' => $err_msg,
                 'data' => $data,
             ],
             4 => [
-                'errcode' => $err_code,
-                'errmsg' => $err_msg,
+                'code' => $err_code,
+                'message' => $err_msg,
                 'data' => $data,
             ],
         };
